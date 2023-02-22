@@ -1,16 +1,35 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  // 개발 도중에 끝나는 변수와 매개변수의 타입을 정의하는 것이 TypeScript
-  // TypeScript에서는 항상 String 또는 Number 와 같은 타입을 다룸.
-  //  주요 원시타입자체는 소문자
-  if (showResult) {
-    console.log(phrase + n2);
-  } else result;
+// const person: object = {
+//     // key : value가 아니라, key : type으로 작성
+//   name: "Maximilian",
+//   age: 30,
+// };
+// const person: {
+//   name: string;
+//   age: number;
+// } = {
+const person: {
+  name: string;
+  age: number;
+  hobbies: string[];
+//   튜플
+  role: [number, string];
+} = {
+  name: "Kim",
+  age: 30,
+  hobbies: ["Sport", "Cooking"],
+  role: [2, "author"],
+};
+person.role.push("admin");
+// person.role에서는 숫자와 문자 같이.
+// person.role[1] = 10;
+
+// 배열안에 string이 들어갈 것
+let Activities: string[];
+Activities = ["Sports"];
+console.log(person);
+
+for (const hobby of person.hobbies) {
+  console.log(hobby.toUpperCase());
+  //   map은 배열일 때 가능, 문자열은 X
+  //   console.log(hobby.map());
 }
-
-const number1 = 5;
-const number2 = 2.8;
-const printResult = true;
-const resultPhrase = "Result is:..";
-
-const result = add(number1, number2, printResult, resultPhrase);
-console.log(result);
