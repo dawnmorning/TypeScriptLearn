@@ -35,13 +35,13 @@ const kim: Player = {
 if (kim.age && kim.age < 10) {
   console.log("있음");
 }
-function playerMaker(name: string): Player {
+function playerMaker(named: string): Player {
   return {
     // name:name
-    name,
+    name: named,
   };
 }
-const pM = (namae : string) : Player = ({namae})
+const pM = (named: string): Player => ({ named });
 
 const JH = playerMaker("nico");
 // JH.age = 12; 가능해짐, PlayerMaker에 Player 타입 넣어놔서
