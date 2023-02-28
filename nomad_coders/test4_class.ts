@@ -22,6 +22,7 @@ class Example extends User {
 }
 const bell = new Example("jh", "kim", "bell");
 // public이어야 사용 가능
+// 
 bell.nickname;
 bell.getFullName();
 
